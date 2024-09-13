@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Actay";
+    src: url("Actay-Regular.otf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Actay";
+    src: url("ActayWide-Bold.otf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
