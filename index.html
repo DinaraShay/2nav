@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/fonts/stylesheet.css">
     <script src="/assets/js/script.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
 
 </head>
 <body>
@@ -61,7 +62,7 @@
         </div>
     </section>
     <section class="check background-circe bck-black p128">
-        <h2 class="title--block  container">Что мы <span class="title-purple">проверяем</span></h2>
+        <h2 class="title--block container--small">Что мы <span class="title-purple">проверяем</span></h2>
         <div class="check-cards container mt64">
             <div class="check-cards_item">
                 <h6 class="check-cards__title">Работоспособность<br>страниц и форм <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,9 +111,9 @@
         </div>
     </section>
     <section class="cases p128">
-        <div class="casses-info container">
+        <div class="header-section2 container--small">
             <h3 class="title--block">Успешные <span>кейсы</span></h3>
-            <div class="casses-info_text">
+            <div class="header-section2-text">
                 <p>Павлуше доверяют тысячи владельцев
                     сайтов,<br> разработчиков и агентств.</p>
             </div>
@@ -120,54 +121,258 @@
 
     </section>
 
-    <section class="change-error container">
+    <section class="change-error container--small">
         <h3 class="title--block"><span>Сверхскоросное</span> исправление ошибок без человеческого фактора</h3>
-        <p class="change-error_text">Работая с человеками, конечно эффективная, но не самая быстрая и дотошно качественная. Зато наш    ИИ умеет то, что жалкие людишки не в состоянии делать:</p>
-        <div class="col--4">
-            <div class="col--4_item">
-                <span>Внимательность</span>
-                <span>Скорость работы</span>
-                <span>Стоимость</span>
-                <span>Настройка</span>
+        <p class="change-error_text">Работая с человеками, конечно эффективная, но не самая быстрая и дотошно качественная. Зато наш<br>ИИ умеет то, что жалкие людишки не в состоянии делать:</p>
+        <div class="col--4 pb128">
+            <div class="col--4_item col--4_item-list">
+                    <span>Внимательность</span>
+                    <span>Скорость работы</span>
+                    <span>Стоимость</span>
+                    <span>Настройка</span>
             </div>
             <div class="col--4_item">
-                <img src="" alt="">
-                <h4>КОмпьютер</h4>
+                <img src="/assets/img/computor.png" alt="Компьютер">
+                <h4>Компьютер</h4>
                 <div class="estimation">
                     <div class="estimation_item">
-                        <span class="estimation_low"></span>
-                        <span class="estimation_high"></span>
-                        <span class="estimation_medium"></span>
-                        <span class="estimation_low"></span>
+                        <span class="flex--estimation bad">низкая</span>
+                        <span class="flex--estimation good">высокая</span>
+                        <span class="flex--estimation good">низкая</span>
+                        <span class="flex--estimation bad">сложная</span>
                     </div>
                 </div>
             </div>
             <div class="col--4_item">
-                <img src="" alt="">
-                <h4>КОмпьютер</h4>
+                <img src="/assets/img/man.png" alt="Человек">
+                <h4>Человек</h4>
                 <div class="estimation">
                     <div class="estimation_item">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="flex--estimation medium">средняя</span>
+                        <span class="flex--estimation bad">низкая</span>
+                        <span class="flex--estimation bad">высокая</span>
+                        <span class="flex--estimation medium">сложная</span>
                     </div>
                 </div>
             </div>
             <div class="col--4_item">
-                <img src="" alt="">
-                <h4>КОмпьютер</h4>
+                <img src="/assets/img/pavel.png" alt="Павлуша">
+                <h4>Павлуша</h4>
                 <div class="estimation">
                     <div class="estimation_item">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="flex--estimation good">низкая</span>
+                        <span class="flex--estimation good">высокая</span>
+                        <span class="flex--estimation good">низкая</span>
+                        <span class="flex--estimation good">сложная</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="tarif container--small">
+        <div class="tarif-col pt128">
+            <div class="tarif-col-item">
+                <h2 class="title--block"><span>Единый тариф</span><br>для всех</h2>
+                <p class="tarif_item-text">Работая с человеками, конечно эффективная, но<br>не самая быстрая и дотошно качественная. Зато<br>наш ИИ умеет то, что жалкие людишки не в<br>состоянии делать:</p>
+                <div class="btn--link">
+                    <a href="" class="btn-green">Подключить<svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.3536 4.35355C15.5488 4.15829 15.5488 3.84171 15.3536 3.64645L12.1716 0.464466C11.9763 0.269204 11.6597 0.269204 11.4645 0.464466C11.2692 0.659728 11.2692 0.976311 11.4645 1.17157L14.2929 4L11.4645 6.82843C11.2692 7.02369 11.2692 7.34027 11.4645 7.53553C11.6597 7.7308 11.9763 7.7308 12.1716 7.53553L15.3536 4.35355ZM0 4.5H15V3.5H0V4.5Z" fill="#9263FA"/>
+                        </svg></a>
+                </div>
+            </div>
+            <div class="tarif-col-item white-bck">
+                <h3 class="title--32">Больше <span>10 000 скринов</span><br>для анализа:</h3>
+                <p><span class="text--64">1,5₽</span>/ за один скрин</p>
+                <div class="tarif-col-item-item">
+                    <span class="text--18">Следующие 10 000 скринов:</span>
+                    <p><span>2,5₽</span>/ за один скрин</p>
+                </div>
+                <div class="tarif-col-item-item">
+                    <span class="text--18">Меньше 10 000 скринов:</span>
+                    <p><span>5₽</span>/ за один скрин</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="faq bck-black p128">
+<div class="header-section2 container--small">
+    <h3 class="title--block"><span>F.A.Q.</span></h3>
+    <div class="casses-info_text">
+        <p>Здесь вы найдете ответы на самые<br> 
+            распространённые вопросы про 2nav</p>
+    </div>
+</div>
+
+<div class="accordeon spoiler container--small">
+    <div class="spoiler__item">
+      <div class="spoiler__item-title">
+        <h4>Как мне добавить свой сайт на проверку?</h4>
+      </div>
+      <div class="spoiler__item-text">
+        <p>От идеи до запуска, бот будет работать с вами, чтобы разработать веб-приложение, которое<br>удовлетворяет потребности вашего стартапа и превосходит ожидания пользователей.</p>
+      </div>
+    </div>
+    <div class="spoiler__item">
+      <div class="spoiler__item-title">
+        <h4>А что если у меня 2 и более сайтов?</h4>
+      </div>
+      <div class="spoiler__item-text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quod veniam atque eaque possimus cum, et quia temporibus porro consequatur, cupiditate iusto iure est eius molestias ex? Dolores, commodi totam?</p>
+    </div>
+    </div>
+    <div class="spoiler__item">
+      <div class="spoiler__item-title">
+        <h4>Могу ли я настроить проверку в определенное время?</h4>
+      </div>
+      <div class="spoiler__item-text">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores inventore labore ea saepe voluptate magnam quibusdam rem aperiam. Id rem quae minus neque expedita ratione, quaerat cumque quas iste dolores?</p>
+    </div>
+    </div>
+    <div class="spoiler__item">
+        <div class="spoiler__item-title">
+          <h4>Как быстро будет проверен мой сайт?</p>
+        </div>
+        <div class="spoiler__item-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores inventore labore ea saepe voluptate magnam quibusdam rem aperiam. Id rem quae minus neque expedita ratione, quaerat cumque quas iste dolores?</p>
+      </div>
+      </div>
+      <div class="spoiler__item">
+        <div class="spoiler__item-title">
+          <h4>Результат “Ошибок нет”, но я виду что есть проблема, что делать?</h4>
+        </div>
+        <div class="spoiler__item-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores inventore labore ea saepe voluptate magnam quibusdam rem aperiam. Id rem quae minus neque expedita ratione, quaerat cumque quas iste dolores?</p>
+      </div>
+      </div>
+      <div class="spoiler__item">
+        <div class="spoiler__item-title">
+          <h4>Как ИИ понимает это — ошибка, а это — нет?</h4>
+        </div>
+        <div class="spoiler__item-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores inventore labore ea saepe voluptate magnam quibusdam rem aperiam. Id rem quae minus neque expedita ratione, quaerat cumque quas iste dolores?</p>
+      </div>
+      </div>
+      <div class="spoiler__item">
+        <div class="spoiler__item-title">
+          <h4>Предлагаете ли вы пробный период или<br>демонстрацию вашей программы перед покупкой?</h4>
+        </div>
+        <div class="spoiler__item-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores inventore labore ea saepe voluptate magnam quibusdam rem aperiam. Id rem quae minus neque expedita ratione, quaerat cumque quas iste dolores?</p>
+      </div>
+      </div>
+      <div class="spoiler__item">
+        <div class="spoiler__item-title">
+          <h4>Как часто обновляется ваше ПО и какие новые<br>функции могут быть доступны в будущих версиях?</p>
+        </div>
+        <div class="spoiler__item-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores inventore labore ea saepe voluptate magnam quibusdam rem aperiam. Id rem quae minus neque expedita ratione, quaerat cumque quas iste dolores?</p>
+      </div>
+      </div>
+      <div class="spoiler__item">
+        <div class="spoiler__item-title">
+          <h4>Какие виды поддержки вы предоставляете в случае<br>возникновения проблем или вопросов после установки?</h4>
+        </div>
+        <div class="spoiler__item-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores inventore labore ea saepe voluptate magnam quibusdam rem aperiam. Id rem quae minus neque expedita ratione, quaerat cumque quas iste dolores?</p>
+      </div>
+      </div>
+      <div class="spoiler__item">
+        <div class="spoiler__item-title">
+          <h4>Есть ли скидки постоянным клиентам?</h4>
+        </div>
+        <div class="spoiler__item-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores inventore labore ea saepe voluptate magnam quibusdam rem aperiam. Id rem quae minus neque expedita ratione, quaerat cumque quas iste dolores?</p>
+      </div>
+      </div>
+      <div class="spoiler__item">
+        <div class="spoiler__item-title">
+          <h4>Какие есть способы оплаты?</h4>
+        </div>
+        <div class="spoiler__item-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores inventore labore ea saepe voluptate magnam quibusdam rem aperiam. Id rem quae minus neque expedita ratione, quaerat cumque quas iste dolores?</p>
+      </div>
+      </div>
+  </div>
+  <div class="top-content__btns">
+    <a class="btn-green" href="">Подключить</a>
+    <a class="btn-green-border" href="">Тарифы<svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.3536 4.35355C15.5488 4.15829 15.5488 3.84171 15.3536 3.64645L12.1716 0.464466C11.9763 0.269204 11.6597 0.269204 11.4645 0.464466C11.2692 0.659728 11.2692 0.976311 11.4645 1.17157L14.2929 4L11.4645 6.82843C11.2692 7.02369 11.2692 7.34027 11.4645 7.53553C11.6597 7.7308 11.9763 7.7308 12.1716 7.53553L15.3536 4.35355ZM0 4.5H15V3.5H0V4.5Z" fill="#9263FA"/>
+        </svg></a>
+</div>
+</div>
+
+</section>
+<section class="checking_web container p128">
+<div class="section-header">
+    <h2 class="title--64">Хотите быть уверены,<br> что <span class="span-purple">ваш сайт работает</span><br>   <span>без сбоев 24/7?</span></h2>
+    <p>Павлуша поможет вам избежать потерь клиентов и доходов!<br>Подпишитесь на автоматическую проверку<br>работоспособности вашего сайта</p>
+</div>
+<div class="section_checking_web-bottom">
+    <div class="section_checking-item">
+        <label for="">Ваш сайт:</label>
+        <input type="text" placeholder="www.google.com">
+    </div>
+    <div class="section_checking-item">
+        <label for="">Частота проверок:</label>
+    </div>
+    <div class="section_checking-item">
+        <label for="">Охват проверок:</label>
+    </div>
+    <div class="section_checking-info">
+        <img src="/assets/img/stiker.png" alt="">
+        <div class="section_checking-info-col">
+            <p class="section_checking-info-text"><span class="span-purple">Популярный</span> охват</p>
+            <p>Используем 10 самых популярных устройств, на которые приходится <span>80% всех пользователей интернета</span></p>
+        </div>
+    </div>
+</div>
+<div class="btn-analyse">
+    <a href="#" class="btn-green">Анализировать<svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.3536 4.35355C15.5488 4.15829 15.5488 3.84171 15.3536 3.64645L12.1716 0.464466C11.9763 0.269204 11.6597 0.269204 11.4645 0.464466C11.2692 0.659728 11.2692 0.976311 11.4645 1.17157L14.2929 4L11.4645 6.82843C11.2692 7.02369 11.2692 7.34027 11.4645 7.53553C11.6597 7.7308 11.9763 7.7308 12.1716 7.53553L15.3536 4.35355ZM0 4.5H15V3.5H0V4.5Z" fill="#9263FA"/>
+        </svg></a>
+</div>
+</section>
+
+
+<footer class="footer container">
+    <div class="footer-blocks container--small">
+        <div class="footer-blocks-item">
+            <a href="/"><img src="/assets/img/svg/logo.svg" alt="Логотип компании"></a>
+            <nav class="footer-nav">
+                <a href="" class="footer-nav__link">Как это работает?</a>
+                <a href="" class="footer-nav__link">Отзывы</a>
+                <a href="" class="footer-nav__link">Тарифы</a>
+                <a href="" class="footer-nav__link">F.A.Q.</a>
+            </nav>
+            <div class="btn-green-border">
+                <a href="">Подключить
+                    <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.3536 4.35355C15.5488 4.15829 15.5488 3.84171 15.3536 3.64645L12.1716 0.464466C11.9763 0.269204 11.6597 0.269204 11.4645 0.464466C11.2692 0.659728 11.2692 0.976311 11.4645 1.17157L14.2929 4L11.4645 6.82843C11.2692 7.02369 11.2692 7.34027 11.4645 7.53553C11.6597 7.7308 11.9763 7.7308 12.1716 7.53553L15.3536 4.35355ZM0 4.5H15V3.5H0V4.5Z" fill="#9263FA"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-blocks-item">
+            <p class="copyright">ОАО «Вторая навигация» Все права защищены, 2024</p>
+            <a href="#">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>
+<script>
+$(function() {
+  $('.spoiler__item-title').click(function(event) {
+    
+    if($('.spoiler').hasClass('accordeon')) {
+        $('.spoiler__item-title').not($(this)).removeClass('active');
+        $('.spoiler__item-text').not($(this).next()).slideUp(300);
+    }
+
+    $(this).toggleClass('active').next().slideToggle(300);
+  });
+});
+</script>
+
     </main>
 
 
