@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -94,54 +93,150 @@ p {
     color: var(--purple);
 }
 
+
+
 /* HEADER */
 
 /* КНОПКИ */
 
-.btn-green-border {
-	border-radius: 100px;
-	border: 1px solid var(--green);
-	padding: 12px 30px;
-	font-weight: 700;
-	color: var(--purple);
-	display: flex;
-	gap: 8px;
-	align-items: center;
-	padding: 10px 30px;
-	backdrop-filter: blur(5px);
+.btn-green-border a {
+    position: relative;
+    border-radius: 100px;
+    border: 1px solid var(--green);
+    font-weight: 700;
+    color: var(--purple);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 10px 30px;
     width: max-content;
+    overflow: hidden;
 }
+
+.btn-green-border a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--green);
+    transition: left 0.5s ease;
+    z-index: 1; /* Помещаем ниже контента, но выше фона */
+}
+
+.btn-green-border a:hover::before {
+    left: 0;
+}
+
+.btn-green-border a {
+    position: relative;
+    z-index: 2; /* Контент (ссылка и иконка) выше псевдоэлемента */
+    color: var(--purple); /* Цвет текста */
+    text-decoration: none;
+    display: flex; /* Чтобы текст и иконка были на одной линии */
+    align-items: center;
+    gap: 8px; /* Отступ между текстом и иконкой */
+}
+
+
+.btn-green-border a svg {
+    z-index: 2; /* Чтобы иконка оставалась выше псевдоэлемента */
+    fill: currentColor; /* Чтобы иконка следовала за цветом текста */
+    transition: transform 0.5s ease;
+}
+
+.btn-green a:hover svg {
+    transform: scale(1.3, 1); /* Увеличение ширины стрелки при наведении */
+}
+
+.btn-green-border a span {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.btn-green a:hover {
+    color: var(--green); /* Цвет текста становится белым при наведении */
+    border1
+}
+
 
 .btn-green-border a {
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	height: 100%;
 }
 
-.btn-green {
-	background-color: var(--green);
-	color: var(--purple);
-	border-radius: 100px;
-	padding: 20px 30px;
-	font-weight: 700;
+.btn-green a {
+    position: relative;
+    background-color: var(--green);
+    color: var(--purple);
+    border-radius: 100px;
+    padding: 20px 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden; /* Для обрезки псевдоэлемента за пределами кнопки */
+    text-decoration: none;
+    border: 1px solid var(--green);
+}
+
+.btn-green a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple); /* Цвет заливки при наведении */
+    transition: left 0.5s ease;
+    z-index: 1; /* Помещаем ниже контента */
+    border-radius:100px;
+    border: 1px solid var(--purple);
+}
+
+.btn-green a:hover::before {
+    left: 0; /* Анимация закрашивания при наведении */
+}
+
+.btn-green a span {
+	position: relative;
+	z-index: 2;
 	display: flex;
 	align-items: center;
 	gap: 8px;
 }
+
+.btn-green a svg {
+    z-index: 2; 
+    fill: currentColor; 
+}
+
+.btn-green a:hover svg path{
+   fill: var(--green);
+}
+
+
 
 /* КНОПКИ */
 
 .top {
 	background-image: url(/assets/img/top-background.png);
 	display: flex;
-	height: calc(100vh - 20vw);
+	/* height: calc(100vh - 20vw); */
 	background-size: cover;
 	position: relative;
 	justify-content: center;
 	align-items: center;
 	background-repeat: no-repeat;
 	width: 100vw;
-	min-height: 1336px; 
+	min-height: 1336px;
+	background-position: center;
 }
 
 .top-content__btns {
@@ -342,27 +437,6 @@ p {
 .header-section2-text{
     font-size: 1rem;
     line-height: 1.5rem;
-}
-
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .change-error_text {
@@ -717,9 +791,7 @@ body .span-purple {
 	width: 800px;
 	height: 800px;
 	background-image: url('/assets/img/hand-pav.png');
-	top: 27%;
-    1;
-
+	bottom: 0;
 }
 .section_checking-item {
 	display: flex;
@@ -828,6 +900,89 @@ input[type=text]::placeholder {
 	width: 198px;
 }
 
+.footer-blocks-item a:hover {
+	color: var(--purple);
+    transition: all 0.7s ease;
+}
+
+.header a:hover {
+    color: var(--purple);
+    transition: all 0.7s ease;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 11rem;
+    border-radius:4rem;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+	height: 700px !important;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical > .swiper-pagination-bullets {
+	left: 80px !important;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-vertical {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.swiper {
+	margin-top: 64px;
+}
+
+.slider-column {
+	display: flex;
+	justify-content: space-between;
+    gap: 20px;
+}
+
+.slider-column-item > .slider-company_name > img {
+	width: 100%;
+    max-width: 240px;
+}
+
+.slider-title {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 2.4rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid #C3C3C3;
+	padding-bottom: 2rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.slider-company_name {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.slider-company_name p {
+    color: var(--grey);
+}
+
+.slider-column-item:first-child {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+
 /* АДАПТИВ */
 
 @media(max-width:1215px) {
@@ -840,6 +995,16 @@ input[type=text]::placeholder {
     .footer-blocks-item {
         flex-wrap: wrap;
         gap: 1rem;
+    }
+}
+
+@media(max-width:1120px) {
+    .top-content_title {
+        display: flex;
+        flex-direction: column;
+    }
+    .top-content_title span {
+        max-width: fit-content;
     }
 }
 
@@ -910,5 +1075,28 @@ input[type=text]::placeholder {
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
+    }
+    .top-content_title {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .title--block {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+    .title--block span {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+}
+
+@media(max-width:500px) {
+    .top-content_title {
+        font-size: 3rem;
+        line-height: 4rem;
     }
 }
